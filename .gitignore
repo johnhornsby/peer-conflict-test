@@ -25,10 +25,6 @@ yarn-error.log*
 # TypeScript
 .tsbuildcache
 
-# Ignore build assets
-**/dist/
-
-
 *.code-workspace
 .vscode/*.json
 .vscode/settings.json

@@ -1,11 +1,13 @@
 {
   "name": "peer-conflict-test",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
-  "main": "index.js",
+  "main": "dist/lib.js",
   "scripts": {
-    "build": "./node_modules/.bin/webpack",
-    "stats": "./node_modules/.bin/webpack --profile --json > ./dist/stats.json && ./node_modules/.bin/webpack-bundle-analyzer ./dist/stats.json"
+    "build": "npx webpack --config webpack.dev.config.js && npx webpack --config webpack.lib.config.js",
+    "check-types": "npx tsc",
+    "dev": "node server.js",
+    "stats": "npx webpack --profile --json > ./dist/stats.json &&  npx webpack-bundle-analyzer ./dist/stats.json"
   },
   "author": "",
   "license": "ISC",
@@ -22,5 +24,6 @@
   "dependencies": {
     "react": "^18.1.0",
     "react-dom": "^18.1.0"
-  }
+  },
+  "files": ["dist"]
 }
