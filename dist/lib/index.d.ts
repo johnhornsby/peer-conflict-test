@@ -1,5 +1,2 @@
 import Box from './Box/Box';
-
-export {
-    Box,
-};
+export { Box, };

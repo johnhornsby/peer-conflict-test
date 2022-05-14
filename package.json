@@ -4,7 +4,9 @@
   "description": "",
   "main": "dist/lib.js",
   "scripts": {
-    "build": "npx webpack --config webpack.dev.config.js && npx webpack --config webpack.lib.config.js",
+    "build": "npm run build-dev && npm run build-lib",
+    "build-dev": "npx webpack --config webpack.dev.config.js",
+    "build-lib": "npx webpack --config webpack.lib.config.js",
     "check-types": "npx tsc",
     "dev": "node server.js",
     "stats": "npx webpack --profile --json > ./dist/stats.json &&  npx webpack-bundle-analyzer ./dist/stats.json"
@@ -25,5 +27,7 @@
     "react": "^18.1.0",
     "react-dom": "^18.1.0"
   },
-  "files": ["dist"]
+  "files": [
+    "dist"
+  ]
 }
