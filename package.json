@@ -3,10 +3,11 @@
   "version": "1.0.1",
   "description": "",
   "main": "dist/lib.js",
+  "types": "dist/lib/index.d.ts",
   "scripts": {
     "build": "npm run build-dev && npm run build-lib",
     "build-dev": "npx webpack --config webpack.dev.config.js",
-    "build-lib": "npx webpack --config webpack.lib.config.js",
+    "build-lib": "rm -r ./dist && npx webpack --config webpack.lib.config.js",
     "check-types": "npx tsc",
     "dev": "node server.js",
     "stats": "npx webpack --profile --json > ./dist/stats.json &&  npx webpack-bundle-analyzer ./dist/stats.json"
