@@ -23,4 +23,7 @@ module.exports = {
       type: "umd",
     },
   },
+  externals: {
+    react: "react",
+  },
 };
